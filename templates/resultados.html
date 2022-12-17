@@ -1,0 +1,113 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de empresas 2.0 - made by R. TEIXEIRA</title>
+<style>
+    table, td, th {
+        border: 2px solid green;
+        border-collapse: collapse;
+        margin-top: 100px;
+        width: 1200px;
+        margin-inline: auto;
+        padding: 10px;
+    }
+    body h1 {
+        width: 200px;
+        margin-top: 100px;
+        margin-inline: auto;
+        display: flex;
+        justify-content: center;
+        border: 2px solid green;
+        padding: 10px;
+    }
+    body {
+        background-color: black;
+        color: white;
+    }
+    ul {
+        margin: 0;
+        width: 100%;
+        padding: 5px;
+        overflow: hidden;
+        background-color: black;
+        
+        
+    }
+        
+    li {
+        float: left;
+        border-right: 2px solid #bbb;
+        
+    }
+
+    li:last-child {
+        border-right: none;
+    }
+        
+    a {
+        text-decoration: none; 
+        border-right: 2px solid green; 
+        background-color: #333; 
+        color: white;
+        padding: 10px;;
+    }
+    
+    li a:hover:not(.active) {
+        background-color: #111;
+        text-decoration: none;
+    }
+    
+    .active {
+        background-color: rgb(0, 159, 0);
+    }
+</style>
+</head>
+<body>
+    <ul>
+        <l1><a  href="/cadastro">CADASTRAR</a></li>
+        <l1><a  href="/deletar">DELETAR</a></li>
+        <l1><a  href="/atualizar">ATUALIZAR</a></li>
+        <l1 style='float:right; margin-right: 6px; '><a style="background-color: rgb(0, 159, 0);" href="/empresas">EMPRESAS</a></li>
+    </ul>
+    <h1>Empresas</h1>
+    
+    <div id="tabela">
+        <table>
+            <tr>
+                <th>CNPJ</th>
+                <th>Nome</th>
+                <th>Logradouro</th>
+                <th>Numero</th>
+                <th>Bairro</th>
+                <th>Municipio</th>
+            </tr>
+        
+            {% for empresa in result%}
+            <tr>
+                <th>{{empresa.cnpj}}</th>    
+                <th>{{empresa.Nome}}</th>  
+                <th>{{empresa.Logradouro}}</th>  
+                <th>{{empresa.Numero}}</th>
+                <th>{{empresa.Bairro}}</th>
+                <th>{{empresa.Municipio}}</th>
+            </tr>
+            {% endfor %}
+        </table>
+
+        
+
+    </div>
+
+
+
+    
+    
+
+</body>
+</html>
+

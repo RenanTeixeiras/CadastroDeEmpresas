@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de empresas 2.0 - made by R. TEIXEIRA</title>
+<style>
+    body {
+        background-color: black;
+        color: white;
+    }
+    body h1{
+        display: flex;
+        padding: 5px;
+        justify-content: center;
+        color: rgb(0, 159, 0);
+        margin-top: 5%;
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid white;
+    }
+    #formulario-cadastrar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid white;
+        height: 200px;
+        width: 300px;
+        margin-inline:  auto;
+        margin-top: 10%;
+        padding: 10px;
+    }
+    #formulario-cadastrar #botao{
+        margin-left: 30%;
+        transition-duration: 0.4s;
+        border: 2px solid green;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        width: 100px;
+    }
+    #formulario-cadastrar #botao:hover {
+        background-color: green;
+        color: white;
+        
+    }
+    #cnpj {
+        border: 2px solid green;
+        background-color: black;
+        color: white;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        outline: none;
+
+    }
+
+    ul {
+        margin: 0;
+        width: 100%;
+        padding: 5px;
+        overflow: hidden;
+        background-color: black;
+        
+        
+    }
+        
+    li {
+        float: left;
+        border-right: 2px solid #bbb;
+        
+    }
+
+    li:last-child {
+        border-right: none;
+    }
+        
+    a {
+        text-decoration: none; 
+        border-right: 2px solid green; 
+        background-color: #333; 
+        color: white;
+        padding: 10px;;
+    }
+    
+    li a:hover:not(.active) {
+        background-color: #111;
+        text-decoration: none;
+    }
+    
+    .active {
+        background-color: rgb(0, 159, 0);;
+    }
+</style>
+</head>
+<body>
+    <ul>
+        <l1><a class= "active" href="home.html">CADASTRAR</a></li>
+        <l1><a  href="/deletar">DELETAR</a></li>
+        <l1><a  href="/atualizar">ATUALIZAR</a></li>
+        <l1 style='float:right; margin-right: 6px'><a  href="/empresas">EMPRESAS</a></li>
+    </ul>
+        <h1>SISTEMA DE CADASTRO DE EMPRESA - MADE BY RENAN TEIXEIRA</h1>
+        <div id="formulario-cadastrar">
+            <form method='POST' action='/cadastro'>
+                <label>CNPJ: </label>
+                <input type="text" name="cnpj" id="cnpj"><br><br><br>
+                <input type="submit" value='Cadastrar' id="botao" onclick="alert('Empresa cadastrada!')">
+            </form>
+        </div>
+
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de empresas 2.0 - made by R. TEIXEIRA</title>
+<style>
+    body {
+        background-color: black;
+        color: white;
+    }
+    body h1{
+        display: flex;
+        padding: 5px;
+        justify-content: center;
+        color: rgb(0, 159, 0);
+        margin-top: 2%;
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid white;
+    }
+    #formulario-cadastrar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid white;
+        height: 550px;
+        width: 550px;
+        margin-inline:  auto;
+        margin-top: 2%;
+        padding: 10px;
+    }
+    label {
+        display: block;
+        width: 42%;
+        float: left;
+    }
+    #formulario-cadastrar #botao{
+        margin-left: 30%;
+        transition-duration: 0.4s;
+        border: 2px solid green;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        width: 130px;
+    }
+    #formulario-cadastrar #botao:hover {
+        background-color: green;
+        color: white;
+        
+    }
+    #campo-dado {
+        border: 2px solid green;
+        background-color: black;
+        color: white;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        outline: none;
+
+    }
+     ul {
+        margin: 0;
+        width: 100%;
+        padding: 5px;
+        overflow: hidden;
+        background-color: black;
+        
+        
+    }
+        
+    li {
+        float: left;
+        border-right: 2px solid #bbb;
+        
+    }
+
+    li:last-child {
+        border-right: none;
+    }
+        
+    a {
+        text-decoration: none; 
+        border-right: 2px solid green; 
+        background-color: #333; 
+        color: white;
+        padding: 10px;;
+    }
+    
+    li a:hover:not(.active) {
+        background-color: #111;
+        text-decoration: none;
+    }
+    
+    .active {
+        background-color: rgb(0, 159, 0);;
+    }
+</style>
+</head>
+<body>
+    <ul>
+        <l1><a class= "active" href="home.html">CADASTRAR</a></li>
+        <l1><a  href="/deletar">DELETAR</a></li>
+        <l1><a  href="/atualizar">ATUALIZAR</a></li>
+        <l1 style='float:right; margin-right: 6px'><a  href="/empresas">EMPRESAS</a></li>
+    </ul>
+<h1>Atualizar Empresa</h1>
+<H2>IMPORTANTE: </H2>
+<H3>Para atualizar a empresa, se certifique de digitar o cnpj correto, pois ele é a primary key. Depois, preencha os novos dados e clique no botão atualizar. 
+    Caso não queira atualizar algum campo específico, digite o valor antigo senão, o sistema atualizará para vazio.
+</H3>
+<div id="formulario-cadastrar">
+<form method='POST' action='/atualizar'>
+    <label>CNPJ: </label>
+    <input id="campo-dado" type="text" name="cnpj"><br><br>
+    <label>NOME: </label>
+    <input id="campo-dado" type="text" name="nome"><br><br>
+    <label>LOGRADOURO: </label>
+    <input id="campo-dado" type="text" name="logradouro"><br><br>
+    <label>NUMERO: </label>
+    <input id="campo-dado" type="text" name="numero"><br><br>
+    <label>COMPLEMENTO: </label>
+    <input id="campo-dado" type="text" name="complemento"><br><br>
+    <label>BAIRRO: </label>
+    <input id="campo-dado" type="text" name="bairro"><br><br>
+    <label>MUNICIPIO: </label>
+    <input id="campo-dado" type="text" name="municipio"><br><br>
+    <label>UF: </label>
+    <input id="campo-dado" type="text" name="uf"><br><br>
+    <label>CEP: </label>
+    <input id="campo-dado" type="text" name="cep"><br><br>
+    <label>TELEFONE: </label>
+    <input id="campo-dado" type="text" name="telefone"><br><br>
+    <label>EMAIL: </label>
+    <input id="campo-dado" type="text" name="email"><br><br>
+    <input id="botao" type="submit" value='Atualizar empresa'>
+</form>
+</div>
+</body>
+</html>
